@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./Auth.module.css";
 
 const SignIn: React.FC = () => {
     const [phone, setPhone] = useState("");
@@ -10,7 +11,7 @@ const SignIn: React.FC = () => {
     };
 
     return (
-        <div style={{ textAlign: "center" }}>
+        <div className={styles.container}>
             <h2>🔑 Tizimga kirish</h2>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Telefon" onChange={(e) => setPhone(e.target.value)} required />
