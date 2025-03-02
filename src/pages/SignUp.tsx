@@ -17,7 +17,6 @@ const SignUp: React.FC = () => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    // 📸 Rasm olish funksiyasi
     const capture = useCallback(() => {
         if (webcamRef.current) {
             const imageSrc = webcamRef.current.getScreenshot();
@@ -25,7 +24,6 @@ const SignUp: React.FC = () => {
         }
     }, [webcamRef]);
 
-    // ✅ Foydalanuvchini ro‘yxatdan o‘tkazish
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         await fetch(`${url}teachers/create`, {
@@ -40,22 +38,31 @@ const SignUp: React.FC = () => {
             })
             .catch(err => {
                 console.log(err)
-                toast.error("Xatolik yuz berdi")
+                toast.error("Malumot saqlanmadi Internetingizni tekshiring!")
             });
     };
 
-    // 🚀 Ma’lumotlarni serverga yuborish
     const sendDataToServer = async () => {
         if (!image) return;
+        const response = await fetch(image!);
+        const blob = await response.blob();
+        const file = new File([blob], "teacher.jpg", { type: "image/jpeg" });
 
+        const formData = new FormData();
+        formData.append("file", file);
         await fetch(`${url}v1/teacher/face/register?teacherId=${teacherId}`, {
             method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ image }),
+            body: formData,
         })
-            .then(() => {
+            .then(res => res.json())
+            .then(data => {
+                if (!data.success) {
+                    toast.success("Sizni yuzingizni tanib bulmadi!");
+                    return;
+                }
                 toast.success("Siz muvaffaqiyatli ro'yxatdan o'tdingiz!");
                 alert("sizning id raqamingiz: " + teacherId);// 249
+                sessionStorage.setItem("teacherId", teacherId || "");
                 navigate("/");
                 setIsCameraOpen(false);
             })
