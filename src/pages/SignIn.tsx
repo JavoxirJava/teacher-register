@@ -10,7 +10,6 @@ const SignIn: React.FC = () => {
     const webcamRef = useRef<Webcam>(null);
     const navigate = useNavigate();
 
-
     useEffect(() => {
         const storedTeacherId = sessionStorage.getItem("teacherId");
         if (storedTeacherId) setTeacherId(storedTeacherId);
@@ -31,15 +30,13 @@ const SignIn: React.FC = () => {
         await fetch(`${url}v1/teacher/face/recognize/by/id?teacherId=${teacherId}`, {
             method: "POST",
             body: formData,
-        }).then(res => res.json())
+        })
+            .then(res => res.json())
             .then(res => {
                 if (res.success) {
                     toast.success("Siz muaffaqiyatli Login qildingiz!");
-                    setTimeout(() => {
-                        navigate("/");
-                    }, 2000);
-                }
-                else toast.warning("Sizni yuzingizni tanib bulmadi!");
+                    navigate("/profile");
+                } else toast.warning("Sizni yuzingizni tanib bulmadi!");
             })
             .catch(err => {
                 console.log(err)

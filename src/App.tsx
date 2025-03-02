@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Admin from "./pages/Admin";
+import TeacherProfile from "./pages/TeacherProfile";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Route path="/signup" element={<SignUp />} />  {/* 📝 Ro‘yxatdan o‘tish */}
           <Route path="/signin" element={<SignIn />} />  {/* 🔑 Tizimga kirish */}
           <Route path="/admin" element={<Admin />} />    {/* 🛠 Admin sahifasi */}
+          <Route path="/profile" element={<TeacherProfile />} /> {/* 👨‍🏫 Teacher profili qo‘shildi */}
         </Routes>
       </Router>
       <ToastContainer />
