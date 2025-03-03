@@ -10,8 +10,7 @@ Admin panel orqali o‘qituvchilarni boshqarish va rasm ma’lumotlarini ko‘ri
 ## 🚀 Foydalanilgan texnologiyalar
 
 - **Frontend:** React (TypeScript), Vite, Bootstrap  
-- **Backend:** Node.js / Express (yoki mavjud API)  
-- **Ma’lumotlar ombori:** PostgreSQL  
+- **Backend:** Mavjud API
 - **Yuzni tanib olish:** OpenCV (backend API orqali)  
 
 ---
@@ -33,7 +32,7 @@ Admin panel orqali o‘qituvchilarni boshqarish va rasm ma’lumotlarini ko‘ri
 
 **2️⃣ Loyihani klonlash va bog‘liqliklarni o‘rnatish**  
 ```bash
-git clone https://github.com/YOUR_GITHUB/teacher-management.git
-cd teacher-management
+git clone https://github.com/JavoxirJava/teacher-register.git
+cd teacher-register
 npm install
 
