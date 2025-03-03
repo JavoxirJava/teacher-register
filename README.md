@@ -1,54 +1,39 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🏫 Teacher Management System
 
-Currently, two official plugins are available:
+Bu loyiha **o‘qituvchilarni ro‘yxatga olish, tahrirlash, filtrlash va yuzni tanib olish tizimini** o‘z ichiga oladi.  
+Admin panel orqali o‘qituvchilarni boshqarish va rasm ma’lumotlarini ko‘rish mumkin.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Foydalanilgan texnologiyalar
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend:** React (TypeScript), Vite, Bootstrap  
+- **Backend:** Node.js / Express (yoki mavjud API)  
+- **Ma’lumotlar ombori:** PostgreSQL  
+- **Yuzni tanib olish:** OpenCV (backend API orqali)  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎯 Loyihaning maqsadi
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- O‘qituvchilarni tizimga ro‘yxatga olish  
+- O‘qituvchilarning ma’lumotlarini tahrirlash va o‘chirish  
+- Rasm yuklash va yuzni tanib olish imkoniyati  
+- Admin panel orqali o‘qituvchilarni boshqarish  
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🛠 Loyihani ishga tushirish
+
+**1️⃣ Talablar:**  
+- **Node.js v18+** (yoki yangiroq)  
+- **NPM yoki Yarn**  
+
+**2️⃣ Loyihani klonlash va bog‘liqliklarni o‘rnatish**  
+```bash
+git clone https://github.com/YOUR_GITHUB/teacher-management.git
+cd teacher-management
+npm install
+
