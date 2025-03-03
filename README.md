@@ -34,5 +34,22 @@ Admin panel orqali o‘qituvchilarni boshqarish va rasm ma’lumotlarini ko‘ri
 ```bash
 git clone https://github.com/JavoxirJava/teacher-register.git
 cd teacher-register
-npm install
+npm install ```
 
+## 🚀 Deploy qilish
+
+### **Netlify orqali**
+1. [Netlify](https://www.netlify.com/) hisobiga kiring  
+2. "New site from Git" orqali loyihani yuklang  
+3. **"Build Command"**: `npm run build`  
+4. **"Publish Directory"**: `dist`  
+5. Deploy tugmasini bosing  
+
+### **Vercel orqali**
+1. [Vercel](https://vercel.com/) hisobiga kiring  
+2. "New Project" orqali GitHub loyihangizni yuklang  
+3. **"Build Command"**: `npm run build`  
+4. **"Output Directory"**: `dist`  
+5. Deploy tugmasini bosing  
+
+✅ **Tugatgandan so‘ng, sizning loyiha tayyor!**  
