@@ -34,7 +34,8 @@ Admin panel orqali o‘qituvchilarni boshqarish va rasm ma’lumotlarini ko‘ri
 ```bash
 git clone https://github.com/JavoxirJava/teacher-register.git
 cd teacher-register
-npm install ```
+npm install
+```
 
 ## 🚀 Deploy qilish
 
