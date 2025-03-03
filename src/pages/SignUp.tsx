@@ -30,7 +30,8 @@ const SignUp: React.FC = () => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ ...form }),
-        }).then(res => res.json())
+        })
+            .then(res => res.json())
             .then(teacher => {
                 setTeacherId(teacher.id);
                 toast.info("Malumotlar saqlandi endi rasmingizni yuboring!");
