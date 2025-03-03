@@ -45,7 +45,6 @@ const TeacherProfile: React.FC = () => {
         try {
             const response = await fetch(`${url}v1/teacher/face/list/${teacher.id}`);
             const data = await response.json();
-            console.log(data.data.length > 0);
 
             if (data.data.length > 0)
                 setTeacher(prev => ({ ...prev, imgId: data.data[0].imgId }));

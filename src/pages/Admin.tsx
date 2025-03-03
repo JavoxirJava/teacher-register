@@ -30,7 +30,6 @@ const Admin: React.FC = () => {
         fetchTeachers();
     }, [currentPage, filter]);
 
-    // 🔄 O‘qituvchilar ro‘yxatini olish
     const fetchTeachers = async () => {
         try {
             const response = await fetch(`${url}teachers/filter`, {
